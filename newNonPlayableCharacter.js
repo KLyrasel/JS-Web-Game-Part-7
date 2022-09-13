@@ -5,7 +5,6 @@ function newNonPlayableCharacter(x, y) {
     let direction = null;
 
     function moveCharacter() {
-        npc.walkEast(2000)
         if (direction === 'west') {
             x -= 1
         }
@@ -24,29 +23,28 @@ function newNonPlayableCharacter(x, y) {
 
     setInterval(moveCharacter, 1)
 
-     async function walkEast() {
+    async function walkEast(){
         direction = 'east'
         element.src = `./assets/red-character/east.gif`
         await sleep(2000)
         npc.stop()
-
     }
 
-   async function walkNorth() {
+   async function walkNorth(){
         direction = 'north'
         element.src = `./assets/red-character/north.gif`
         await sleep(2000)
         npc.stop()
     }
 
-    async function walkWest() {
+    async function walkWest(){
         direction = 'west'
         element.src = `./assets/red-character/west.gif`
         await sleep(2000)
         npc.stop()
     }
 
-    async function walkSouth() {
+    async function walkSouth(){
         direction = 'south'
         element.src = `./assets/red-character/south.gif`
         await sleep(2000)
@@ -73,6 +71,4 @@ function newNonPlayableCharacter(x, y) {
         })  
     }
 
-    
-    
 }
